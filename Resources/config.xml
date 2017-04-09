@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../../engine/Shopware/Components/Plugin/schema/config.xsd">
+    <elements>
+        <element scope="shop" type="number">
+            <name>catId</name>
+            <label lang="de">Kategorie Id</label>
+            <label lang="en">Cat id</label>
+            <value>14</value>
+        </element>
+    </elements>
+</config>
