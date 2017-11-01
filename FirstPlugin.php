@@ -10,6 +10,7 @@ use Shopware\Components\Plugin;
  */
 class FirstPlugin extends Plugin
 {
+    const snippetName = 'local_product';
     /**
      * @return array
      */
@@ -47,7 +48,7 @@ class FirstPlugin extends Plugin
         $view = $args->getSubject()->View();
         $sArticle = $view->getAssign('sArticle');
         if ($sArticle['categoryID'] === $this->getCatId()) {
-            $sArticle['articleName'] = $sArticle['articleName'] . '(' . $this->getTransletionByIdent('local_product') . ')';
+            $sArticle['articleName'] = $sArticle['articleName'] . '(' . $this->getTransletionByIdent(self::snippetName) . ')';
             $view->assign('sArticle', $sArticle);
         }
     }
