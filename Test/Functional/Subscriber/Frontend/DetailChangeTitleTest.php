@@ -1,9 +1,9 @@
 <?php
 
 
-namespace FirstPlugin\Test\Functional;
+namespace FirstPlugin\Test\Functional\Subscriber\Frontend;
 
-use FirstPlugin\FirstPlugin;
+use FirstPlugin\Subscriber\Frontend\DetailChangeTitle;
 use FirstPlugin\Test\UserHelper;
 
 class DetailChangeTitleTest extends \Enlight_Components_Test_Controller_TestCase
@@ -45,6 +45,6 @@ class DetailChangeTitleTest extends \Enlight_Components_Test_Controller_TestCase
         $namespace = Shopware()->Container()->get('snippets')->getNamespace(
             'frontend/detail/firstplugin'
         );
-        return $namespace->get(FirstPlugin::snippetName);
+        return $namespace->get(DetailChangeTitle::snippetName);
     }
 }

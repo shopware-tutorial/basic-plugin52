@@ -1,7 +1,7 @@
 <?php
 
 
-namespace FirstPlugin\Test\Functional;
+namespace FirstPlugin\Test\Functional\Subscriber\Frontend;
 
 
 use FirstPlugin\Test\UserHelper;
