@@ -16,6 +16,21 @@ class DetailRedirectTest extends \Enlight_Components_Test_Controller_TestCase
         $this->reset();
     }
 
+//    public function reset()
+//    {
+//        parent::reset();
+//        $container = Shopware()->Container();
+//        $events = $container->get('events');
+//        $events->addSubscriber(
+//            $container->get('first_plugin.subscriber.frontend.detail_redirect')
+//        );
+//        $events->addSubscriber(
+//            $container->get('first_plugin.subscriber.frontend.detail_change_title')
+//        );
+//
+//    }
+
+
     public function testRedirectProductWithNotLoggedUser()
     {
         $response = $this->dispatch('/genusswelten/edelbraende/9/special-finish-lagerkorn-x.o.-32');

@@ -12,6 +12,27 @@ class CategoryCheck implements CategoryCheckInterface
     private $articleInfo = [];
 
     /**
+     * @var \Enlight_Components_Db_Adapter_Pdo_Mysql
+     */
+    private $db;
+
+    /**
+     * @var \Shopware_Components_Config
+     */
+    private $config;
+
+    /**
+     * @param \Enlight_Components_Db_Adapter_Pdo_Mysql $db
+     * @param \Shopware_Components_Config $config
+     */
+    public function __construct(\Enlight_Components_Db_Adapter_Pdo_Mysql $db, \Shopware_Components_Config $config)
+    {
+        $this->db = $db;
+        $this->config = $config;
+    }
+
+
+    /**
      * @param int $articleId
      * @return bool
      */
@@ -19,7 +40,7 @@ class CategoryCheck implements CategoryCheckInterface
     {
         if (!isset($this->articleInfo[$articleId])) {
             $catId = $this->getCatId();
-            $this->articleInfo[$articleId] = (bool) Shopware()->Db()->fetchOne(
+            $this->articleInfo[$articleId] = (bool) $this->db->fetchOne(
                 'SELECT id FROM s_articles_categories WHERE articleID = ? AND categoryID = ? LIMIT 1',
                 [
                     $articleId, $catId
@@ -34,7 +55,7 @@ class CategoryCheck implements CategoryCheckInterface
      */
     private function getCatId(): int
     {
-        return (int)Shopware()->Config()->getByNamespace('FirstPlugin', 'catId');
+        return (int)$this->config->getByNamespace('FirstPlugin', 'catId');
     }
 
 }

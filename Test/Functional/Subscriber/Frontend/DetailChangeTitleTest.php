@@ -24,7 +24,7 @@ class DetailChangeTitleTest extends \Enlight_Components_Test_Controller_TestCase
         $this->dispatch('/genusswelten/edelbraende/9/special-finish-lagerkorn-x.o.-32');
         $snippet = $this->getTransletionByIdent();
         $this->assertNotFalse(strpos($this->_view->getAssign('sArticle')['articleName'], $snippet));
-        
+
         $this->logoutUser();
     }
 

@@ -18,3 +18,8 @@
 ### 06. Shopware 5 | Subscriber Interface [DE]
 
 [![06. Shopware 5 | Subscriber Interface [DE]](https://i.ytimg.com/vi/Fb2oQI3mL6E/hqdefault.jpg)](https://youtu.be/Fb2oQI3mL6E "06. Shopware 5 | Subscriber Interface [DE]")
+
+
+### 07. Shopware 5 | services.xml für Plugin [DE]
+
+[![07. Shopware 5 | services.xml für Plugin [DE]](https://i.ytimg.com/vi/rkry7PVpRwk/hqdefault.jpg)](https://youtu.be/rkry7PVpRwk "07. Shopware 5 | services.xml für Plugin [DE]")
